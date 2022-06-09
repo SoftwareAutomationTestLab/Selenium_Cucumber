@@ -1,0 +1,8 @@
+mvn:
+  
+  image : markhobson/maven-chrome:jdk-18
+  volumes:
+    - ./:/usr/src/mvn-src
+  working_dir: /usr/src/mvn-src
+  command: mvn clean test  -Dmaven.wagon.http.ssl.insecure=true
+  
